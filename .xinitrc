@@ -1,8 +1,10 @@
 #Swap escape and caps for the x session
 setxkbmap -option caps:swapescape
-#run unclutter to automatically hide the mouse
-unclutter &:
+#add resources to session
+xrdb ~/.Xresources
 #Set mouse cursor
-xsetroot -pulse-glass left_ptr
+xsetroot -cursor_name left_ptr &
+#run unclutter to automatically hide the mouse
+unclutter &
 #Launch
 exec xmonad

@@ -9,11 +9,8 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 #Swap the esc and tab keys
-if [ ! "$pidof(X)" ]
-then
-    echo keycode 1 = Caps_Lock | sudo loadkeys
-    echo keycode 58 = Escape | sudo loadkeys
-fi
+echo keycode 1 = Caps_Lock | sudo loadkeys > logfile
+echo keycode 58 = Escape | sudo loadkeys > logfile
 
 #Allow java to make windows in Xmonad
 export _JAVA_AWT_WM_NONREPARENTING=1
