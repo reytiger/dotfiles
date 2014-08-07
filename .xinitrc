@@ -4,9 +4,9 @@ setxkbmap -option caps:swapescape
 xrdb ~/.Xresources
 #Set mouse cursor
 xsetroot -cursor_name left_ptr &
-#run unclutter to automatically hide the mouse
-unclutter &
 #Allow Java guis to display properly
 export _JAVA_AWT_WM_NONREPARENTING=1
+#Launch pulseaudio
+#/usr/bin/start-pulseaudio-x11
 #Launch
 exec xmonad
