@@ -1,8 +1,9 @@
 import XMonad
+import XMonad.Layout.NoBorders
 
-main = xmonad defaultConfig
+main = xmonad $ defaultConfig { layoutHook = smartBorders $ layoutHook defaultConfig }
     {
         terminal        = "terminology"
         , modMask       = mod4Mask
-        , borderWidth   = 3
+        , borderWidth   = 2
     }
