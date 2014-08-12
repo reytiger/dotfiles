@@ -9,8 +9,8 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 #Swap the esc and tab keys
-echo keycode 1 = Caps_Lock | sudo loadkeys > logfile
-echo keycode 58 = Escape | sudo loadkeys > logfile
+echo keycode 1 = Caps_Lock | sudo loadkeys
+echo keycode 58 = Escape | sudo loadkeys
 
 #aliases to allow easy power control
 alias reboot="sudo systemctl reboot"
