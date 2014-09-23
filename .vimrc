@@ -28,5 +28,25 @@ set tabstop=4
 " # of spaces to indent using cindent, >>, etc.
 set shiftwidth=4
 
+" # of spaces for tabs and backspaces. May force tab alignment
+set softtabstop=4
+
 " use spaces as tabs
 set expandtab
+
+" move between vim windows with ctrl-hjkl
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+
+" more mappings for resizing windows
+nmap <C--> <C-w>-
+nmap <C-_> <C-w>_
+nmap <C-=> <C-w>=
+
+nmap <M->> <C-w>10>
+nmap <M-<> <C-w<lt>10>
+
+" make backspace behave like morst applications
+set backspace=2

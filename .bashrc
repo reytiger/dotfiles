@@ -16,3 +16,12 @@ echo keycode 58 = Escape | sudo loadkeys
 alias reboot="sudo systemctl reboot"
 alias poweroff="sudo systemctl poweroff"
 alias halt="sudo systemctl halt"
+
+#temp fix to get Xorg to run on right TTY
+alias xinit="xinit -- vt$XDG_VTNR"
+
+#More terminal colors
+eval $(dircolors -b)
+
+#Intro to Linux thing
+export LC_COLLATE=C

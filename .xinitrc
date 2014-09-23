@@ -5,11 +5,15 @@ xrdb ~/.Xresources
 #Set mouse cursor
 xsetroot -cursor_name left_ptr &
 #Allow Java guis to display properly
-export _JAVA_AWT_WM_NONREPARENTING=1
+#export _JAVA_AWT_WM_NONREPARENTING=1 Handled now by arch in /etc/profile.d/jre.sh
 export _JAVA_OPTIONS='-Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dswing.crossplatformlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
 #Envirotnment variable for GTK2
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 #Launch pulseaudio
 /usr/bin/start-pulseaudio-x11
+#Hide the mouse
+unclutter -grab &
+#Fix for unclutter in SDL games
+export SDL_VIDEO_X11_DGAMOUSE=0
 #Launch
 exec xmonad
