@@ -40,7 +40,7 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
-" more mappings for resizing windows
+" more mappings for resizing windows TODO: make better
 nmap <C--> <C-w>-
 nmap <C-_> <C-w>_
 nmap <C-=> <C-w>=
@@ -50,3 +50,19 @@ nmap <M-<> <C-w<lt>10>
 
 " make backspace behave like morst applications
 set backspace=2
+
+" Automatically open, but do not go to (if there are errors) the quickfix /
+" location list window, or close it when is has become empty.
+"
+" Note: Must allow nesting of autocmds to enable any customizations for quickfix
+" buffers.
+" Note: Normally, :cwindow jumps to the quickfix window if the command opens it
+" (but not if it's already open). However, as part of the autocmd, this doesn't
+" seem to happen.
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow 
+
+" Indentation for ruby
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+
+runtime ftplugin/man.vim
