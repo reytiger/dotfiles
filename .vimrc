@@ -23,13 +23,13 @@ set incsearch
 set smartindent
 
 " # of spaces that a tab counts as
-set tabstop=4
+set tabstop=2
 
 " # of spaces to indent using cindent, >>, etc.
-set shiftwidth=4
+set shiftwidth=2
 
 " # of spaces for tabs and backspaces. May force tab alignment
-set softtabstop=4
+set softtabstop=2
 
 " use spaces as tabs
 set expandtab
@@ -48,7 +48,7 @@ nmap <C-=> <C-w>=
 nmap <M->> <C-w>10>
 nmap <M-<> <C-w<lt>10>
 
-" make backspace behave like morst applications
+" make backspace behave like most applications
 set backspace=2
 
 " Automatically open, but do not go to (if there are errors) the quickfix /

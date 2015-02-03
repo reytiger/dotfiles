@@ -7,8 +7,8 @@ import XMonad.Util.Run
 main = do
 xmproc <- spawnPipe "/usr/bin/xmobar /home/rey/.xmonad/xmobarrc"
 xmonad $ defaultConfig { layoutHook = smartBorders $ layoutHook defaultConfig }
-    {
-        terminal        = "terminology"
-        , modMask       = mod1Mask
-        , borderWidth   = 2
-    }
+  { terminal          = "terminology"
+  , modMask           = mod1Mask
+  , borderWidth       = 2
+  , focusedBorderColor = "#248F24"
+  }
