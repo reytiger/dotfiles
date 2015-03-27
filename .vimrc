@@ -62,7 +62,4 @@ set backspace=2
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow 
 
-" Indentation for ruby
-autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
-
 runtime ftplugin/man.vim
