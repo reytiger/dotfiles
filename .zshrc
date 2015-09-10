@@ -14,7 +14,7 @@ SAVEHIST=1000
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
-# Prompt
+# Fancy green fade prompt
 autoload -Uz promptinit
 promptinit
 prompt fade
@@ -24,14 +24,15 @@ prompt fade
 alias ls='ls --color=auto'
 set PS1='[\u@\h \W]\$ '
 
-#Swap the esc and tab keys
+#Swap the esc and tab keys inside of terminals
 echo keycode 1 = Caps_Lock | sudo loadkeys
 echo keycode 58 = Escape | sudo loadkeys
 
 #aliases to allow easy power control
-alias reboot="sudo systemctl reboot"
-alias poweroff="sudo systemctl poweroff"
-alias halt="sudo systemctl halt"
+alias reboot="systemctl reboot"
+alias poweroff="systemctl poweroff"
+alias halt="systemctl halt"
+alias suspend="systemctl suspend"
 
 #temp fix to get Xorg to run on right TTY
 alias xinit="xinit -- vt$XDG_VTNR"
