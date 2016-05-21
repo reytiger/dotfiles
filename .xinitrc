@@ -15,5 +15,14 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 unclutter -grab &
 #Fix for unclutter in SDL games
 export SDL_VIDEO_X11_DGAMOUSE=0
+#turn on numlock
+numlockx &
+
+#unbind the right alt from mod1
+if test -s ~/.Xmodmap; then
+  xmodmap ~/.Xmodmap
+fi
+# Use native libraries for steam
+# export STEAM_RUNTIME=0
 #Launch
 exec xmonad
