@@ -19,7 +19,10 @@ set number
 " Realtime search
 set incsearch
 
-" smart intdent
+" retain highlighting on recent search term
+set hlsearch
+
+" smart indent
 set smartindent
 
 " # of spaces that a tab counts as
